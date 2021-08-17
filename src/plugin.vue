@@ -28,10 +28,12 @@
 
             const defaults = {
                 dateFormat: 'U', altFormat: 'Y-m-d G:i K', altInput: true, enableTime: true,
+                minDate: new Date(),
                 onChange: (selectedDates, dateStr, instance) => {
                     emit('update:modelValue', dateStr);
                     emit('change', selectedDates, dateStr, instance);
                 },
+
             };
             const o = Object.assign({}, defaults, config, props.config);
 
