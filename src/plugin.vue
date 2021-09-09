@@ -41,10 +41,10 @@
                 return o.dateFormat == 'U' ? date * 1000 : date;
             }
 
-            onMounted(() => {
+            onMounted(() => {                
 
-                register('link', { id: 'flatpickr-css', href: process.env.CDN_CSS, type: 'text/css', rel: 'stylesheet' });
-                register('script', { id: 'flatpickr-js', src: process.env.CDN_JS, async: true }).then(() => {
+                register('link', { id: 'flatpickr-css', href: 'https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css', type: 'text/css', rel: 'stylesheet' });
+                register('script', { id: 'flatpickr-js', src: 'https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js', async: true }).then(() => {
                     instance = flatpickr(root.value, o);
                     instance.setDate(parse(props.modelValue));
                 });
